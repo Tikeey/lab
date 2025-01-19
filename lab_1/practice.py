@@ -1,5 +1,2 @@
-#You can display a string literal with the print() function:
-print("Hello")
-print('Hello')
-
-#
+#With our "Try it Yourself" editor, you can edit Python code and view the result.
+print("Hello, World!")
