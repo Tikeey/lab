@@ -1,2 +1,4 @@
-#With our "Try it Yourself" editor, you can edit Python code and view the result.
-print("Hello, World!")
+#Check the Python version of the editor:
+import sys
+
+print(sys.version)
