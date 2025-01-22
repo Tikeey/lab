@@ -1,291 +1,350 @@
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 #Example
-#Create a Set:
+#Create and print a dictionary:
 
-thisset = {"apple", "banana", "cherry"}
-print(thisset)
-
-#Example
-#True and 1 is considered the same value:
-
-thisset = {"apple", "banana", "cherry", True, 1, 2}
-
-print(thisset)
-
-#Example
-#False and 0 is considered the same value:
-
-thisset = {"apple", "banana", "cherry", False, True, 0}
-
-print(thisset)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
 
 #Example
-#Loop through the set, and print the values:
+#Print the "brand" value of the dictionary:
 
-thisset = {"apple", "banana", "cherry"}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
 
-for x in thisset:
+#Duplicate values will overwrite existing values:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+#Example
+#Print the number of items in the dictionary:
+
+print(len(thisdict))
+
+#Example
+#String, int, boolean, and list data types:
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+#Example
+#Print the data type of a dictionary:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+
+#It is also possible to use the dict() constructor to make a dictionary.
+
+#Example
+#Using the dict() method to make a dictionary:
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+#Example
+#Get the value of the "model" key:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+
+#Example
+#Get the value of the "model" key:
+
+x = thisdict.get("model")
+
+#The keys() method will return a list of all the keys in the dictionary.
+
+#Example
+#Get a list of the keys:
+
+x = thisdict.keys()
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+#x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+
+#The values() method will return a list of all the values in the dictionary.
+
+#Example
+#Get a list of the values:
+
+x = thisdict.values()
+
+#Get Items
+#The items() method will return each item in a dictionary, as tuples in a list.
+
+#Example
+#Get a list of the key:value pairs
+
+x = thisdict.items()
+
+#Example
+#Check if "model" is present in the dictionary:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+  #You can change the value of a specific item by referring to its key name:
+
+#Example
+#Change the "year" to 2018:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+"""
+Update Dictionary
+The update() method will update the dictionary with the items from the given argument.
+
+The argument must be a dictionary, or an iterable object with key:value pairs.
+
+Example
+Update the "year" of the car by using the update() method:
+"""
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+#Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+
+#Example
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+"""
+Update Dictionary
+The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
+
+The argument must be a dictionary, or an iterable object with key:value pairs.
+
+Example
+Add a color item to the dictionary by using the update() method:
+"""
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+#Example
+#The pop() method removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+#Example
+#The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+#Example
+#The del keyword removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+
+#Example
+#The clear() method empties the dictionary:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+
+#Example
+#Print all key names in the dictionary, one by one:
+
+for x in thisdict:
   print(x)
+#Example
+#Print all values in the dictionary, one by one:
+
+for x in thisdict:
+  print(thisdict[x])
+#Example
+#You can also use the values() method to return values of a dictionary:
+
+for x in thisdict.values():
+  print(x)
+#Example
+#You can use the keys() method to return the keys of a dictionary:
+
+for x in thisdict.keys():
+  print(x)
+#Example
+#Loop through both keys and values, by using the items() method:
+
+for x, y in thisdict.items():
+  print(x, y)
 
   #Example
-#Check if "banana" is present in the set:
+#Make a copy of a dictionary with the copy() method:
 
-thisset = {"apple", "banana", "cherry"}
-
-print("banana" in thisset)
-
-#Example
-#Check if "banana" is NOT present in the set:
-
-thisset = {"apple", "banana", "cherry"}
-
-print("banana" not in thisset)
-
-#Add an item to a set, using the add() method:
-
-thisset = {"apple", "banana", "cherry"}
-
-thisset.add("orange")
-
-print(thisset)
-
-#To add items from another set into the current set, use the update() method.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+#Another way to make a copy is to use the built-in function dict().
 
 #Example
-#Add elements from tropical into thisset:
+#Make a copy of a dictionary with the dict() function:
 
-thisset = {"apple", "banana", "cherry"}
-tropical = {"pineapple", "mango", "papaya"}
-
-thisset.update(tropical)
-
-print(thisset)
-
-#Example
-#Add elements of a list to at set:
-
-thisset = {"apple", "banana", "cherry"}
-mylist = ["kiwi", "orange"]
-
-thisset.update(mylist)
-
-print(thisset)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
 
 #Example
-#Remove "banana" by using the remove() method:
+#Create a dictionary that contain three dictionaries:
 
-thisset = {"apple", "banana", "cherry"}
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
 
-thisset.remove("banana")
+#Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
 
-print(thisset)
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
 
-#Remove "banana" by using the discard() method:
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
 
-thisset = {"apple", "banana", "cherry"}
-
-thisset.discard("banana")
-
-print(thisset)
-
-#Remove a random item by using the pop() method:
-
-thisset = {"apple", "banana", "cherry"}
-
-x = thisset.pop()
-
-print(x)
-
-print(thisset)
-
-#Example
-#The clear() method empties the set:
-
-thisset = {"apple", "banana", "cherry"}
-
-thisset.clear()
-
-print(thisset)
-
-#Example
-#The del keyword will delete the set completely:
-
-thisset = {"apple", "banana", "cherry"}
-
-del thisset
-
-print(thisset)
+#To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
 
 #Example
-#Loop through the set, and print the values:
+#Print the name of child 2:
 
-thisset = {"apple", "banana", "cherry"}
+print(myfamily["child2"]["name"])
 
-for x in thisset:
+#You can loop through a dictionary by using the items() method like this:
+
+#Example
+#Loop through the keys and values of all nested dictionaries:
+
+for x, obj in myfamily.items():
   print(x)
 
-  #The union() method returns a new set with all items from both sets.
+  for y in obj:
+    print(y + ':', obj[y])
 
-#Example
-#Join set1 and set2 into a new set:
-
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
-
-set3 = set1.union(set2)
-print(set3)
-
-#Example
-#Use | to join two sets:
-
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
-
-set3 = set1 | set2
-print(set3)
-
-#Example
-#Join multiple sets with the union() method:
-
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
-set3 = {"John", "Elena"}
-set4 = {"apple", "bananas", "cherry"}
-
-myset = set1.union(set2, set3, set4)
-print(myset)
-
-#Example
-#Join a set with a tuple:
-
-x = {"a", "b", "c"}
-y = (1, 2, 3)
-
-z = x.union(y)
-print(z)
-
-#The update() method inserts the items in set2 into set1:
-
-set1 = {"a", "b" , "c"}
-set2 = {1, 2, 3}
-
-set1.update(set2)
-print(set1)
-
-#Join set1 and set2, but keep only the duplicates:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1.intersection(set2)
-print(set3)
-
-#Use & to join two sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1 & set2
-print(set3)
-
-#The intersection_update() method will also keep ONLY the duplicates, but it will change the original set instead of returning a new set.
-
-#Example
-#Keep the items that exist in both set1, and set2:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set1.intersection_update(set2)
-
-print(set1)
-
-#Join sets that contains the values True, False, 1, and 0, and see what is considered as duplicates:
-
-set1 = {"apple", 1,  "banana", 0, "cherry"}
-set2 = {False, "google", 1, "apple", 2, True}
-
-set3 = set1.intersection(set2)
-
-print(set3)
-
-#Keep all items from set1 that are not in set2:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1.difference(set2)
-
-print(set3)
-
-#Example
-#Use - to join two sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1 - set2
-print(set3)
-
-#Example
-#Use the difference_update() method to keep the items that are not present in both sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set1.difference_update(set2)
-
-print(set1)
-
-#Example
-#Keep the items that are not present in both sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1.symmetric_difference(set2)
-
-print(set3)
-
-#Example
-#Use ^ to join two sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set3 = set1 ^ set2
-print(set3)
-
-#Example
-#Use the symmetric_difference_update() method to keep the items that are not present in both sets:
-
-set1 = {"apple", "banana", "cherry"}
-set2 = {"google", "microsoft", "apple"}
-
-set1.symmetric_difference_update(set2)
-
-print(set1)
 """
-Set Methods
-Python has a set of built-in methods that you can use on sets.
+    Dictionary Methods
+Python has a set of built-in methods that you can use on dictionaries.
 
-Method	Shortcut	Description
-add()	 	Adds an element to the set
-clear()	 	Removes all the elements from the set
-copy()	 	Returns a copy of the set
-difference()	-	Returns a set containing the difference between two or more sets
-difference_update()	-=	Removes the items in this set that are also included in another, specified set
-discard()	 	Remove the specified item
-intersection()	&	Returns a set, that is the intersection of two other sets
-intersection_update()	&=	Removes the items in this set that are not present in other, specified set(s)
-isdisjoint()	 	Returns whether two sets have a intersection or not
-issubset()	<=	Returns whether another set contains this set or not
- 	<	Returns whether all items in this set is present in other, specified set(s)
-issuperset()	>=	Returns whether this set contains another set or not
- 	>	Returns whether all items in other, specified set(s) is present in this set
-pop()	 	Removes an element from the set
-remove()	 	Removes the specified element
-symmetric_difference()	^	Returns a set with the symmetric differences of two sets
-symmetric_difference_update()	^=	Inserts the symmetric differences from this set and another
-union()	|	Return a set containing the union of sets
-update()	|=	Update the set with the union of this set and others
+Method	Description
+clear()	Removes all the elements from the dictionary
+copy()	Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	Returns the value of the specified key
+items()	Returns a list containing a tuple for each key value pair
+keys()	Returns a list containing the dictionary's keys
+pop()	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
 """
