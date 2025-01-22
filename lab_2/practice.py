@@ -1,43 +1,91 @@
-#With the while loop we can execute a set of statements as long as a condition is true.
-
 #Example
-#Print i as long as i is less than 6:
+#Print each fruit in a fruit list:
 
-i = 1
-while i < 6:
-  print(i)
-  i += 1
-
-  #With the break statement we can stop the loop even if the while condition is true:
-
-#Example
-#Exit the loop when i is 3:
-
-i = 1
-while i < 6:
-  print(i)
-  if i == 3:
-    break
-  i += 1
-
-  #With the continue statement we can stop the current iteration, and continue with the next:
-
-#Example
-#Continue to the next iteration if i is 3:
-
-i = 0
-while i < 6:
-  i += 1
-  if i == 3:
-    continue
-  print(i)
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
 
   #Example
-#Print a message once the condition is false:
+#Loop through the letters in the word "banana":
 
-i = 1
-while i < 6:
-  print(i)
-  i += 1
+for x in "banana":
+  print(x)
+
+  #Example
+#Exit the loop when x is "banana":
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+
+  #Example
+#Exit the loop when x is "banana", but this time the break comes before the print:
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    break
+  print(x)
+
+  #Example
+#Do not print banana:
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+
+  #Example
+#Using the range() function:
+
+for x in range(6):
+  print(x)
+
+
+  #Example
+#Using the start parameter:
+
+for x in range(2, 6):
+  print(x)
+
+  #Example
+#Increment the sequence with 3 (default is 1):
+
+for x in range(2, 30, 3):
+  print(x)
+
+  #Example
+#Print all numbers from 0 to 5, and print a message when the loop has ended:
+
+for x in range(6):
+  print(x)
 else:
-  print("i is no longer less than 6")
+  print("Finally finished!")
+
+  #Example
+#Break the loop when x is 3, and see what happens with the else block:
+
+for x in range(6):
+  if x == 3: break
+  print(x)
+else:
+  print("Finally finished!")
+
+  Example
+Print each adjective for every fruit:
+
+#adj = ["red", "big", "tasty"]
+#fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    print(x, y)
+
+    #for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+
+#Example
+for x in [0, 1, 2]:
+  pass
