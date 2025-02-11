@@ -12,7 +12,7 @@ a = int(input("Write a number of elements: "))
 
 list = []
 
-for i in range(a):
+for i in range(a):      
 
     num = int(input("Write an element: "))
 

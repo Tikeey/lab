@@ -1,19 +1,18 @@
-def histogram(lst):
+def space(str):
 
-    for i in lst:
-            
-        print("*" * i)
+    cnt = 0
 
-        
-    
-a = int(input("Write a number of list elements: "))
+    for x in str:
 
-list = []
+        if x == " ":
 
-for i in range(a):
+            cnt += 1
 
-    num = int(input("Write an elemnt of list: "))
+    return cnt
 
-    list.append(num)
-    
-histogram(list)
+
+
+
+a = str(input("Ведите строку: "))
+
+print(space(a))
