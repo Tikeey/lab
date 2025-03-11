@@ -51,10 +51,9 @@ def previous_song():
 
     play_music()
 
-keyboard.add_hotkey("w", play_music)  # Press SPACE to play
-keyboard.add_hotkey("s", stop_music)      # Press 'S' to stop
-keyboard.add_hotkey("d", next_song)       # Press 'N' for next song
-keyboard.add_hotkey("a", previous_song)   # Press 'P' for previous song
+keyboard.add_hotkey("w", play_music)
+keyboard.add_hotkey("s", stop_music).add_hotkey("d", next_song)
+keyboard.add_hotkey("a", previous_song)
 
 print("🎵 Music Player Started! Controls:")
 
