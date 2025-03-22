@@ -15,14 +15,14 @@ background_img = pygame.image.load("set/road_back.png").convert()
 background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
 player_img = pygame.image.load("set/car.png").convert_alpha()
-player_img = pygame.transform.scale(player_img, (40, 60))
+player_img = pygame.transform.scale(player_img, (60, 80))
 player_rect = player_img.get_rect(center=(WIDTH // 2, HEIGHT - 80))
 
 enemy_img = pygame.image.load("set/enemy_car.png").convert_alpha()
-enemy_img = pygame.transform.scale(enemy_img, (40, 60))
+enemy_img = pygame.transform.scale(enemy_img, (60, 80))
 
 coin_img = pygame.image.load("set/coin.png").convert_alpha()
-coin_img = pygame.transform.scale(coin_img, (20, 20))
+coin_img = pygame.transform.scale(coin_img, (40, 40))
 
 player_speed = 5
 coin_score = 0
